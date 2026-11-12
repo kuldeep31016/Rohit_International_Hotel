@@ -1,0 +1,62 @@
+    <!-- ============ Availability banner ============ -->
+    <section class="availability" aria-label="Check availability">
+      <div class="container">
+        <div class="availability__panel">
+          <form class="availability__form" id="availability-form" novalidate>
+            <div class="availability__label">
+              <strong>Plan your stay</strong>
+              <span>Book now · Pay at check-in</span>
+            </div>
+            <label class="field">
+              <span class="field__label"><svg><use href="#i-cal"/></svg>Check-in</span>
+              <span class="field__value" data-date-display="checkin">—</span>
+              <input type="date" name="checkin" id="av-checkin" aria-label="Check-in date" required>
+            </label>
+            <label class="field">
+              <span class="field__label"><svg><use href="#i-cal"/></svg>Check-out</span>
+              <span class="field__value" data-date-display="checkout">—</span>
+              <input type="date" name="checkout" id="av-checkout" aria-label="Check-out date" required>
+            </label>
+            <label class="field field--select">
+              <span class="field__label"><svg><use href="#i-user"/></svg>Guests</span>
+              <select name="guests" id="av-guests" aria-label="Number of guests">
+                <option value="1">1 Adult</option>
+                <option value="2" selected>2 Adults</option>
+                <option value="3">3 Adults</option>
+                <option value="4">4 Adults</option>
+                <option value="5">5 Adults</option>
+                <option value="6">6+ Guests</option>
+              </select>
+            </label>
+            <label class="field field--select">
+              <span class="field__label"><svg><use href="#i-key"/></svg>Rooms</span>
+              <select name="rooms" id="av-rooms" aria-label="Number of rooms">
+                <option value="1" selected>1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4+ Rooms</option>
+              </select>
+            </label>
+            <button type="submit" class="btn btn--dark availability__submit">Check availability</button>
+          </form>
+
+          <div class="availability__result" id="availability-result" aria-live="polite">
+            <div>
+              <div class="availability__inner">
+                <div class="availability__summary">
+                  <span class="meta" data-av="dates"></span>
+                  <p class="availability__status" data-av="status"></p>
+                  <ul class="availability__rooms" data-av="rooms"></ul>
+                  <p class="availability__note">Indicative availability. Your reservation is confirmed by a call or email from our front desk.</p>
+                </div>
+                <div class="availability__actions">
+                  <button class="btn btn--primary" data-open-booking data-from-availability>Reserve now</button>
+                  <a class="btn btn--ghost" href="tel:+916184222033"><svg><use href="#i-phone"/></svg>Call</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+

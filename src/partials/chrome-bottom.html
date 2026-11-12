@@ -1,0 +1,156 @@
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <a href="index.html" class="brand">
+            <svg class="brand__mark" aria-hidden="true"><use href="#mark"/></svg>
+            <span class="brand__text"><span class="brand__name">Rohit International</span><span class="brand__sub">Hotel · Sasaram</span></span>
+          </a>
+          <p class="footer__statement">A family's welcome on the Grand Trunk Road.</p>
+          <div class="socials">
+            <a href="https://www.facebook.com/HotelRohitInternational" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
+            <a href="#" data-modal="instagram" aria-label="Instagram"><svg><use href="#i-insta"/></svg></a>
+            <a href="https://wa.me/918229801202" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-whatsapp"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="stay.html">Stay</a></li>
+            <li><a href="dining.html">Dining</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <address>Old G.T. Road, Sasaram,<br>Bihar 821115</address>
+          <ul style="margin-top:1rem">
+            <li><a href="tel:+916184222033">+91 6184 222 033</a></li>
+            <li><a href="tel:+918229801202">+91 82298 01202</a></li>
+            <li><a href="mailto:booking@hotelrohitinternational.com">booking@hotelrohitinternational.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Write to us</h4>
+          <ul>
+            <li><a href="mailto:booking@hotelrohitinternational.com">Reservations</a></li>
+            <li><a href="mailto:corporate@hotelrohitinternational.com">Corporate</a></li>
+            <li><a href="mailto:feedback@hotelrohitinternational.com">Feedback</a></li>
+            <li><a href="mailto:job@hotelrohitinternational.com">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year></span> Rohit International Hotel, Sasaram. All rights reserved.</span>
+        <nav aria-label="Legal"><a href="#" data-modal="privacy">Privacy Policy</a><a href="#" data-modal="terms">Terms &amp; Conditions</a></nav>
+      </div>
+      <p class="footer__credits">Landmark photography via Wikimedia Commons — Sher Shah Suri's Tomb: Rahulsinghxl (CC BY-SA 4.0) and Nandanupadhyay (CC BY-SA 3.0); Hasan Khan Suri's Tomb: Amitabha Gupta (CC BY 4.0); Rohtasgarh Fort: Rangan Datta Wiki (CC BY-SA 4.0). Selected interior and food photography via Unsplash, for presentation.</p>
+      <div class="footer__wordmark" aria-hidden="true">Rohit International</div>
+    </div>
+  </footer>
+
+  <!-- Mobile action bar -->
+  <div class="mobile-cta" id="mobile-cta">
+    <a href="tel:+916184222033"><svg><use href="#i-phone"/></svg>Call</a>
+    <a href="https://wa.me/918229801202" target="_blank" rel="noopener"><svg><use href="#i-whatsapp"/></svg>Chat</a>
+    <button data-open-booking>Book your stay</button>
+  </div>
+
+  <!-- ============ Booking drawer ============ -->
+  <div class="drawer" id="booking" role="dialog" aria-modal="true" aria-labelledby="booking-title" aria-hidden="true">
+    <div class="drawer__scrim" data-close-booking></div>
+    <div class="drawer__panel">
+      <div class="drawer__head">
+        <div>
+          <h2 id="booking-title">Reserve your stay</h2>
+          <p id="booking-sub">Book now, pay at check-in.</p>
+        </div>
+        <button class="drawer__close" aria-label="Close booking" data-close-booking><svg><use href="#i-close"/></svg></button>
+      </div>
+
+      <div class="drawer__body">
+        <form id="booking-form" novalidate>
+          <div class="steps" aria-hidden="true"><span class="is-current"><i>1</i>Your stay</span><span><i>2</i>Your details</span></div>
+
+          <div class="form-grid">
+            <div class="fgroup"><label for="bk-checkin">Check-in</label><input type="date" id="bk-checkin" name="checkin" required><span class="error"></span></div>
+            <div class="fgroup"><label for="bk-checkout">Check-out</label><input type="date" id="bk-checkout" name="checkout" required><span class="error"></span></div>
+            <div class="fgroup"><span class="label fgroup-label" id="lbl-guests" style="font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--taupe)">Guests</span>
+              <div class="stepper" role="group" aria-labelledby="lbl-guests"><button type="button" data-step="guests" data-dir="-1" aria-label="Fewer guests">−</button><output id="bk-guests" aria-live="polite">2</output><button type="button" data-step="guests" data-dir="1" aria-label="More guests">+</button></div>
+            </div>
+            <div class="fgroup"><span class="label" id="lbl-rooms" style="font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--taupe)">Rooms</span>
+              <div class="stepper" role="group" aria-labelledby="lbl-rooms"><button type="button" data-step="rooms" data-dir="-1" aria-label="Fewer rooms">−</button><output id="bk-rooms" aria-live="polite">1</output><button type="button" data-step="rooms" data-dir="1" aria-label="More rooms">+</button></div>
+            </div>
+
+            <fieldset class="fgroup full room-options" id="room-options">
+              <legend>Room type</legend>
+            </fieldset>
+
+            <div class="fgroup full"><label for="bk-type">I'm enquiring about</label>
+              <select id="bk-type" name="type">
+                <option value="stay">A room stay</option>
+                <option value="event">A wedding or event</option>
+                <option value="table">A table at the restaurant</option>
+                <option value="taxi">A station / airport pickup</option>
+              </select>
+            </div>
+
+            <div class="fgroup"><label for="bk-name">Full name</label><input id="bk-name" name="name" autocomplete="name" required placeholder="Your name"><span class="error"></span></div>
+            <div class="fgroup"><label for="bk-phone">Mobile</label><input id="bk-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required placeholder="10-digit mobile"><span class="error"></span></div>
+            <div class="fgroup"><label for="bk-promo">Promo code</label><input id="bk-promo" name="promo" placeholder="Optional"></div>
+            <div class="fgroup"><label for="bk-offer">Package</label><input id="bk-offer" name="offer" placeholder="Optional"></div>
+            <div class="fgroup full"><label for="bk-notes">Special requests</label><textarea id="bk-notes" name="notes" placeholder="Arrival time, extra bed, pickup from the station…"></textarea></div>
+          </div>
+
+          <div class="summary-box" id="booking-summary" aria-live="polite"></div>
+        </form>
+
+        <div class="success" id="booking-success" role="status">
+          <svg><use href="#i-check"/></svg>
+          <h3>Thank you.</h3>
+          <p id="success-text">Your request is ready. Send it to our front desk on WhatsApp, or call us — we will confirm your reservation shortly.</p>
+          <div class="success__actions">
+            <a class="btn btn--primary" id="success-wa" href="#" target="_blank" rel="noopener"><svg><use href="#i-whatsapp"/></svg>Send on WhatsApp</a>
+            <a class="btn btn--ghost" href="tel:+916184222033"><svg><use href="#i-phone"/></svg>Call the front desk</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="drawer__foot" id="booking-foot">
+        <button type="submit" form="booking-form" class="btn btn--dark btn--block">Request reservation</button>
+        <p>No payment now · Pay at check-in · Confirmed by call or email</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+    <span class="lightbox__count" id="lb-count"></span>
+    <button class="lightbox__btn lightbox__close" aria-label="Close" data-lb="close"><svg><use href="#i-close"/></svg></button>
+    <button class="lightbox__btn lightbox__prev" aria-label="Previous image" data-lb="prev"><svg><use href="#i-chev-l"/></svg></button>
+    <figure><img id="lb-img" src="" alt=""><figcaption id="lb-cap"></figcaption></figure>
+    <button class="lightbox__btn lightbox__next" aria-label="Next image" data-lb="next"><svg><use href="#i-chev-r"/></svg></button>
+  </div>
+
+  <!-- Policy modal -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal__box">
+      <button class="drawer__close" aria-label="Close" data-modal-close><svg><use href="#i-close"/></svg></button>
+      <h2 id="modal-title"></h2>
+      <p id="modal-body"></p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/main.js?v={{v}}" defer></script>
+</body>
+</html>
+
